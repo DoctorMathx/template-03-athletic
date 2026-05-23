@@ -1,0 +1,98 @@
+import type { Collection } from "@/lib/types";
+
+export const collections: Collection[] = [
+  {
+    id: "col-new",
+    slug: "new-arrivals",
+    title: "New Arrivals",
+    description: "Fresh drops straight from the lab. First to move, first to get.",
+    heroImage: "/images/pexels-photo-4908551.jpg",
+    productIds: ["w1", "w2", "w3", "w4", "m1", "m2", "m6", "m8"],
+    gender: "unisex",
+  },
+  {
+    id: "col-women",
+    slug: "shop-women",
+    title: "Shop Women",
+    description: "Performance wear built for every rep, run and rest day.",
+    heroImage: "/images/pexels-photo-4909006.jpg",
+    productIds: ["w1", "w2", "w3", "w4", "w5", "w6", "w7", "w8"],
+    gender: "women",
+  },
+  {
+    id: "col-men",
+    slug: "shop-men",
+    title: "Shop Men",
+    description: "Train harder. Recover faster. Look sharper.",
+    heroImage: "/images/pexels-photo-4804068.jpg",
+    productIds: ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8"],
+    gender: "men",
+  },
+  {
+    id: "col-leggings",
+    slug: "leggings",
+    title: "Leggings",
+    description: "From studio to street — seamless, sculpting and built to move.",
+    heroImage: "/images/pexels-photo-4908628.jpg",
+    productIds: ["w1", "w3", "w6"],
+    gender: "women",
+  },
+  {
+    id: "col-shorts",
+    slug: "shorts",
+    title: "Shorts",
+    description: "Lightweight, breathable, and ready for whatever you're training for.",
+    heroImage: "/images/pexels-photo-4908639.jpg",
+    productIds: ["w5", "m1", "m3", "m5"],
+    gender: "unisex",
+  },
+  {
+    id: "col-sports-bras",
+    slug: "sports-bras",
+    title: "Sports Bras",
+    description: "Light, medium and high-support options for every type of training.",
+    heroImage: "/images/pexels-photo-4908991.jpg",
+    productIds: ["w2", "w6"],
+    gender: "women",
+  },
+  {
+    id: "col-tops",
+    slug: "tops",
+    title: "Tops",
+    description: "Performance tops that move with you from first set to last.",
+    heroImage: "/images/pexels-photo-5036856.jpg",
+    productIds: ["w4", "m2", "m4", "m6"],
+    gender: "unisex",
+  },
+  {
+    id: "col-outerwear",
+    slug: "outerwear",
+    title: "Outerwear",
+    description: "Hoodies and jackets built for the gym and beyond.",
+    heroImage: "/images/pexels-photo-8436410.jpg",
+    productIds: ["w7", "m7"],
+    gender: "unisex",
+  },
+  {
+    id: "col-joggers",
+    slug: "joggers",
+    title: "Joggers",
+    description: "Everyday performance comfort in tapered styles you'll never want to take off.",
+    heroImage: "/images/pexels-photo-4909320.jpg",
+    productIds: ["w8", "m8"],
+    gender: "unisex",
+  },
+  {
+    id: "col-sale",
+    slug: "sale",
+    title: "Sale",
+    description: "Up to 50% off selected styles. Limited time only.",
+    heroImage: "/images/pexels-rocketmann-prod-9486932.jpg",
+    productIds: ["w1", "w5", "w6", "m3"],
+    gender: "unisex",
+  },
+];
+
+export function getCollectionBySlug(slug: string) {
+  return collections.find((c) => c.slug === slug);
+}
