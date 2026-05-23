@@ -177,7 +177,7 @@ export default function ProductPage({ params }: Props) {
             </button>
           </div>
 
-          <p className="text-[12px] text-neutral-400 mb-6">Free shipping on orders over $75 · Free returns</p>
+          <p className="text-[12px] text-neutral-400 mb-6">Free shipping on orders over ₦112,500 · Free returns</p>
 
           {/* Accordion */}
           <div className="border-t border-neutral-100">

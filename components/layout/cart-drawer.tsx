@@ -127,7 +127,7 @@ export function CartDrawer() {
           <div className="border-t border-neutral-100 px-6 py-5 space-y-4">
             <div className="flex items-center justify-between">
               <span className="text-[13px] text-neutral-500">Subtotal</span>
-              <span className="text-[15px] font-bold">${subtotal.toFixed(2)}</span>
+              <span className="text-[15px] font-bold">₦{subtotal.toLocaleString("en-NG")}</span>
             </div>
             <p className="text-[11px] text-neutral-400">Shipping and taxes calculated at checkout.</p>
             <Link

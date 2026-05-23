@@ -10,7 +10,7 @@ const faqs = [
     category: "Orders & Shipping",
     items: [
       { q: "How long does shipping take?", a: "Standard shipping takes 5–7 business days. Express shipping (2–3 days) and overnight options are available at checkout. International orders typically arrive within 7–14 days." },
-      { q: "Do you offer free shipping?", a: "Yes! We offer free standard shipping on all orders over $75. International orders over $150 also qualify for free shipping." },
+      { q: "Do you offer free shipping?", a: "Yes! We offer free standard shipping on all orders over ₦112,500. International orders over ₦225,000 also qualify for free shipping." },
       { q: "Can I track my order?", a: "Absolutely. Once your order ships, you'll receive a tracking link via email. You can also check your order status in your account dashboard." },
       { q: "Can I change or cancel my order?", a: "Orders can be modified or cancelled within 1 hour of placing them. After that, they may have already been processed for packing. Contact us ASAP at hello@finstore.africa." },
     ],

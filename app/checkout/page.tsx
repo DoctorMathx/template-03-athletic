@@ -18,7 +18,7 @@ export default function CheckoutPage() {
   const [orderSummaryOpen, setOrderSummaryOpen] = useState(false);
   const [processing, setProcessing] = useState(false);
 
-  const shipping = subtotal >= 75 ? 0 : 9.99;
+  const shipping = subtotal >= 112500 ? 0 : 15000;
   const total = subtotal + shipping;
 
   const [form, setForm] = useState({
@@ -101,7 +101,7 @@ export default function CheckoutPage() {
                 {orderSummaryOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 {orderSummaryOpen ? "Hide" : "Show"} order summary
               </span>
-              <span className="font-bold">${total.toFixed(2)}</span>
+              <span className="font-bold">₦{total.toLocaleString("en-NG")}</span>
             </button>
 
             {/* Mobile order summary */}
@@ -177,9 +177,9 @@ export default function CheckoutPage() {
                 <h2 className="text-[14px] font-bold tracking-[0.06em] uppercase mb-4">Shipping Method</h2>
                 <div className="border border-neutral-200 divide-y divide-neutral-100">
                   {[
-                    { id: "standard", label: "Standard Shipping", sub: "5–7 business days", price: subtotal >= 75 ? "Free" : "$9.99" },
-                    { id: "express", label: "Express Shipping", sub: "2–3 business days", price: "$19.99" },
-                    { id: "overnight", label: "Overnight", sub: "Next business day", price: "$34.99" },
+                    { id: "standard", label: "Standard Shipping", sub: "5–7 business days", price: subtotal >= 112500 ? "Free" : "₦15,000" },
+                    { id: "express", label: "Express Shipping", sub: "2–3 business days", price: "₦30,000" },
+                    { id: "overnight", label: "Overnight", sub: "Next business day", price: "₦52,500" },
                   ].map((method) => (
                     <label key={method.id} className="flex items-center justify-between px-4 py-4 cursor-pointer hover:bg-neutral-50 transition-colors">
                       <div className="flex items-center gap-3">
@@ -238,7 +238,7 @@ export default function CheckoutPage() {
                 )}
               >
                 <Lock size={13} />
-                {processing ? "Processing..." : `Pay $${total.toFixed(2)}`}
+                {processing ? "Processing..." : `Pay ₦${total.toLocaleString("en-NG")}`}
               </button>
 
               <p className="text-center text-[11px] text-neutral-400">
@@ -282,17 +282,17 @@ export default function CheckoutPage() {
               <div className="border-t border-neutral-200 pt-4 space-y-2 text-[13px]">
                 <div className="flex justify-between">
                   <span className="text-neutral-500">Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>₦{subtotal.toLocaleString("en-NG")}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-500">Shipping</span>
-                  <span className={shipping === 0 ? "text-green-600 font-semibold" : ""}>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
+                  <span className={shipping === 0 ? "text-green-600 font-semibold" : ""}>{shipping === 0 ? "Free" : `₦${shipping.toLocaleString("en-NG")}`}</span>
                 </div>
               </div>
 
               <div className="border-t border-neutral-200 mt-4 pt-4 flex justify-between text-[15px] font-bold">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>₦{total.toLocaleString("en-NG")}</span>
               </div>
             </div>
           </div>

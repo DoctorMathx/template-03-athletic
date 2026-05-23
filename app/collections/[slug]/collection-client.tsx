@@ -13,7 +13,7 @@ const SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
 export function CollectionClient({ products }: { products: Product[] }) {
   const [sort, setSort] = useState<SortOption>("featured");
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
-  const [priceMax, setPriceMax] = useState<number>(200);
+  const [priceMax, setPriceMax] = useState<number>(300000);
   const [genderFilter, setGenderFilter] = useState<string>("all");
   const [filtersOpen, setFiltersOpen] = useState(false);
 
@@ -53,12 +53,12 @@ export function CollectionClient({ products }: { products: Product[] }) {
 
   const activeFilterCount =
     selectedSizes.length +
-    (priceMax < 200 ? 1 : 0) +
+    (priceMax < 300000 ? 1 : 0) +
     (genderFilter !== "all" ? 1 : 0);
 
   const clearFilters = () => {
     setSelectedSizes([]);
-    setPriceMax(200);
+    setPriceMax(300000);
     setGenderFilter("all");
   };
 
@@ -162,20 +162,20 @@ export function CollectionClient({ products }: { products: Product[] }) {
             {/* Price */}
             <div>
               <p className="text-[11px] font-bold tracking-[0.14em] uppercase mb-3">
-                Max Price: <span className="font-normal normal-case tracking-normal">${priceMax}</span>
+                Max Price: <span className="font-normal normal-case tracking-normal">₦{priceMax.toLocaleString("en-NG")}</span>
               </p>
               <input
                 type="range"
-                min={10}
-                max={200}
-                step={5}
+                min={15000}
+                max={300000}
+                step={5000}
                 value={priceMax}
                 onChange={(e) => setPriceMax(Number(e.target.value))}
                 className="w-full accent-black"
               />
               <div className="flex justify-between text-[11px] text-neutral-400 mt-1">
-                <span>$10</span>
-                <span>$200</span>
+                <span>₦15,000</span>
+                <span>₦300,000</span>
               </div>
             </div>
           </div>

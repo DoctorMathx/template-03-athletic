@@ -31,7 +31,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const announcementMessages = [
-  "FREE SHIPPING ON ORDERS OVER $75",
+  "FREE SHIPPING ON ORDERS OVER ₦112,500",
   "MID-SEASON SALE — UP TO 50% OFF",
   "NEW DROP: SHADOW SEAMLESS COLLECTION",
   "REFER A FRIEND · BOTH SAVE 10%",

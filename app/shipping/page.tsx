@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 };
 
 const shippingRates = [
-  { method: "Standard Shipping", time: "5–7 business days", cost: "$9.99", note: "Free on orders over $75" },
-  { method: "Express Shipping", time: "2–3 business days", cost: "$19.99", note: "" },
-  { method: "Overnight", time: "Next business day", cost: "$34.99", note: "Order before 12 PM" },
-  { method: "International", time: "7–14 business days", cost: "From $14.99", note: "Free on orders over $150" },
+  { method: "Standard Shipping", time: "5–7 business days", cost: "₦15,000", note: "Free on orders over ₦112,500" },
+  { method: "Express Shipping", time: "2–3 business days", cost: "₦30,000", note: "" },
+  { method: "Overnight", time: "Next business day", cost: "₦52,500", note: "Order before 12 PM" },
+  { method: "International", time: "7–14 business days", cost: "From ₦22,500", note: "Free on orders over ₦225,000" },
 ];
 
 export default function ShippingPage() {

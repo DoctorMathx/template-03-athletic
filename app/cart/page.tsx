@@ -13,7 +13,7 @@ const suggestedProducts = products.filter((p) => p.isBestSeller).slice(0, 4);
 export default function CartPage() {
   const { items, subtotal, removeItem, updateQuantity, clearCart } = useCart();
 
-  const shipping = subtotal >= 75 ? 0 : 9.99;
+  const shipping = subtotal >= 112500 ? 0 : 15000;
   const total = subtotal + shipping;
 
   return (
@@ -135,24 +135,24 @@ export default function CartPage() {
               <div className="space-y-3 text-[13px]">
                 <div className="flex justify-between">
                   <span className="text-neutral-500">Subtotal</span>
-                  <span className="font-semibold">${subtotal.toFixed(2)}</span>
+                  <span className="font-semibold">₦{subtotal.toLocaleString("en-NG")}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-500">Shipping</span>
                   <span className={shipping === 0 ? "font-semibold text-green-600" : "font-semibold"}>
-                    {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
+                    {shipping === 0 ? "Free" : `₦${shipping.toLocaleString("en-NG")}`}
                   </span>
                 </div>
                 {shipping > 0 && (
                   <p className="text-[11px] text-neutral-400">
-                    Add ${(75 - subtotal).toFixed(2)} more for free shipping
+                    Add ₦{(112500 - subtotal).toLocaleString("en-NG")} more for free shipping
                   </p>
                 )}
               </div>
 
               <div className="border-t border-neutral-100 mt-5 pt-5 flex justify-between text-[15px] font-bold">
                 <span>Estimated Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>₦{total.toLocaleString("en-NG")}</span>
               </div>
 
               {/* Promo code */}

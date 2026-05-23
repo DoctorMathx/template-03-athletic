@@ -8,8 +8,8 @@ type Tab = "login" | "register";
 type DashTab = "orders" | "wishlist" | "settings";
 
 const mockOrders = [
-  { id: "FS-38291", date: "May 18, 2026", status: "Delivered", total: "$94.00", items: 2 },
-  { id: "FS-29847", date: "Apr 30, 2026", status: "Shipped", total: "$68.50", items: 1 },
+  { id: "FS-38291", date: "May 18, 2026", status: "Delivered", total: "₦141,000", items: 2 },
+  { id: "FS-29847", date: "Apr 30, 2026", status: "Shipped", total: "₦102,750", items: 1 },
 ];
 
 function LoginForm({ onLogin }: { onLogin: () => void }) {
